@@ -1,0 +1,68 @@
+/* Color Variable	Use it for…
+--primary-color	Navigation bar, headings, buttons
+--secondary-color	Card backgrounds, hover effects, subtle dividers
+--accent-color	Buttons, links, promo highlights (like discounts)
+--text-color	Main body text
+--background-color	Page background, sections, or containers */
+
+
+:root{
+    --primary-color: #3c2f2f;
+    --secondary-color: #5a453b;
+    --accent-color: #ffcc99;
+    --text-color: #3c2f2f;
+    --background-color: #fffaf5;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #fffaf5;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  .navbar{
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--accent-color);
+  }
+  .nav-left, .nav-right{
+    
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    text-decoration: none;
+
+  }
+  
+  .nav-item{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 18px;  
+  }
+
+
+    .button {
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 20px 0px;
+  /* font-weight: bold; */
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--primary-color); /* blue-600 */
+  color: white;
+}
