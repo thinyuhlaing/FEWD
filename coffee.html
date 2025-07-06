@@ -1,35 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Selection</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
 
-<body>
-    <header>
-        <h1>Our Coffee Blends</h1>
-        <!-- Use the same nav bar here -->
-    </header>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-    <!-- Animated search bar -->
-    <input type="text" id="searchBar" placeholder="Search coffee blends..." onkeyup="searchCoffee()">
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <section id="coffeeList">
-        <div class="coffee-item">Espresso Roast - Bold and intense.</div>
-        <div class="coffee-item">Colombian - Smooth with caramel notes.</div>
-        <div class="coffee-item">Ethiopian - Floral with bright acidity.</div>
-    </section>
+    <div class="container page-container">
+      <h1 class="heading" data-aos="fade-up">Coffee Selection</h1>
+      <!-- Search Box -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control"
+            placeholder="Search coffee..."
+          />
+        </div>
+      </div>
 
-    <!-- Plugins: animated text search (above), and maybe an Instagram feed plugin below -->
+      <!-- Catalogue -->
+      <div class="row" id="coffeeCatalogue">
+        <!-- Product Card 1 -->
+        <div
+          class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
+          data-aos="fade-up"
+          data-name="Morning Bliss caramel nutty"
+        >
+          <div class="card h-100">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYEHq9CPM7UC75pp2OdN_PzYKtBGbEvrUeYA&s"
+              alt="Morning Bliss"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Morning Bliss</h5>
+                <span class="card-price">$6.00 USD</span>
+              </div>
+              <div class="card-description">
+                <p>
+                  A smooth medium roast with notes of caramel and hazelnut.
+                  Perfect to start your day.
+                </p>
 
-    <footer>
-        <p>&copy; 2025 Bean Boutique</p>
-    </footer>
+                <p class="mb-0">
+                  <strong>Recommended Brewing:</strong> Pour-over, French Press,
+                  Espresso
+                </p>
+                <p class="mb-0">
+                  <strong>Tasting Notes:</strong> Espresso, French Press
+                </p>
+                <div class="button add-to-card-btn">
+                  Add To Card
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <script src="js/coffee.js"></script>
-</body>
+        <!-- Product Card 2 -->
+        <div
+          class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
+          data-aos="fade-up"
+          data-name="Ethiopian Yirgacheffe citrus floral berry"
+        >
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+              alt="Ethiopian Yirgacheffe"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Ethiopian Yirgacheffe</h5>
+                <span class="card-price">$7.50 USD</span>
+              </div>
+              <div class="card-description">
+                <p>
+                  Bright and floral single-origin coffee with citrus and berry
+                  notes.
+                </p>
+                <p class="mb-0">
+                  <strong>Recommended Brewing:</strong> Pour-over, French Press,
+                  Espresso
+                </p>
+                <p class="mb-0">
+                  <strong>Tasting Notes:</strong> Citrus, jasmine, berry
+                </p>
+                <div class="button add-to-card-btn">
+                  Add To Cart <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Product Card 3 -->
+        <div
+          class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
+          data-aos="fade-up"
+          data-name="Sumatra Mandheling earthy herbal smooth"
+        >
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80"
+              alt="Sumatra Mandheling"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Sumatra Mandheling</h5>
+                <span class="card-price">$8.00 USD</span>
+              </div>
+              <div class="card-description">
+                <p>
+                  Deep, earthy notes with low acidity and herbal undertones.
+                </p>
+                <p class="mb-0">
+                  <strong>Recommended Brewing:</strong> Pour-over, French Press,
+                  Espresso
+                </p>
+                <p class="mb-0">
+                  <strong>Tasting Notes:</strong> Earthy, herbal, smooth
+                </p>
+                <div class="button add-to-card-btn">
+                  Add To Cart <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div
+          class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
+          data-aos="fade-up"
+          data-name="Guatemalan Antigua chocolate spice smoky"
+        >
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+              alt="Guatemalan Antigua"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Guatemalan Antigua</h5>
+                <span class="card-price">$7.00 USD</span>
+              </div>
+              <div class="card-description">
+                <p>
+                  Rich full-bodied coffee with chocolate and spicy notes from
+                  volcanic soil.
+                </p>
+                <p class="mb-0">
+                  <strong>Recommended Brewing:</strong> Pour-over, French Press,
+                  Espresso
+                </p>
+                <p class="mb-0">
+                  <strong>Tasting Notes:</strong> Chocolate, spice, smoky
+                </p>
+                <div class="button add-to-card-btn">
+                  Add To Cart <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div
+          class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
+          data-aos="fade-up"
+          data-name="Costa Rican Tarrazu honey bright nutty"
+        >
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
+              alt="Costa Rican Tarrazu"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Costa Rican Tarrazu</h5>
+                <span class="card-price">$7.25 USD</span>
+              </div>
+              <div class="card-description">
+                <p>
+                  Bright, balanced coffee with honey sweetness and nutty
+                  undertones.
+                </p>
+                <p class="mb-0">
+                  <strong>Recommended Brewing:</strong> Pour-over, French Press,
+                  Espresso
+                </p>
+                <p class="mb-0">
+                  <strong>Tasting Notes:</strong> Honey, bright fruit, nutty
+                </p>
+                <div class="button add-to-card-btn">
+                  Add To Cart <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div
+          class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
+          data-aos="fade-up"
+          data-name="Bean Boutique Blend medium balanced sweet"
+        >
+          <div class="card h-100">
+            <img
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+              alt="Bean Boutique Blend"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Bean Boutique Blend</h5>
+                <span class="card-price">$6.75 USD</span>
+              </div>
+              <div class="card-description">
+                <p>A medium roast blend balancing acidity and sweetness.</p>
+                <p class="mb-0">
+                  <strong>Recommended Brewing:</strong> Pour-over, French Press,
+                  Espresso
+                </p>
+                <p class="mb-0">
+                  <strong>Tasting Notes:</strong> Balanced, sweet, smooth
+                </p>
+                <div class="button add-to-card-btn">
+                  Add To Cart <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <!-- JS Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

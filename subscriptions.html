@@ -1,34 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Special Offers and Subscriptions</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscriptions</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-<body>
-    <header>
-        <h1>Special Offers & Subscriptions</h1>
-        <!-- Nav bar -->
-    </header>
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
 
-    <section>
-        <h2>Monthly Coffee Box</h2>
-        <p>Receive handpicked beans every month. Includes surprise blends!</p>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+    <div class="container page-container">
+      <!-- Special Offers Section -->
+      <section>
+        <h1 class="heading" data-aos="fade-up">Speical Offers Subscription</h1>
 
-        <h2>Subscription Tiers</h2>
-        <ul>
-            <li>Basic (£9.99/mo): 1 bag of beans</li>
-            <li>Pro (£14.99/mo): 2 bags + brewing tips</li>
-            <li>Ultimate (£19.99/mo): 3 bags + exclusive merchandise</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Bean Boutique</p>
-    </footer>
-</body>
-
+        <div class="row g-4">
+          <article class="col-md-4">
+            <div class="card offer-card h-100 shadow-sm">
+              <img
+                alt="Close-up of a sleek espresso machine with a steaming cup of espresso on a wooden counter in a cozy coffee shop"
+                class="card-img-top"
+                height="400"
+                loading="lazy"
+                src="https://storage.googleapis.com/a1aa/image/f9833a75-aed4-4e06-6c57-721c90539f74.jpg"
+                width="600"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5 text-warning">
+                  Espresso Machine Bundle
+                </h3>
+                <p class="card-text flex-grow-1">
+                  Get 15% off when you purchase our premium espresso machine
+                  with a starter pack of coffee beans.
+                </p>
+                <button
+                  aria-label="Claim Espresso Machine Bundle Offer"
+                  class="btn btn-warning text-white mt-auto"
+                  type="button"
+                >
+                  Claim Offer
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-4">
+            <div class="card offer-card h-100 shadow-sm">
+              <img
+                alt="Artistic arrangement of coffee beans spilling from a burlap sack onto a rustic wooden table with a cup of black coffee"
+                class="card-img-top"
+                height="400"
+                loading="lazy"
+                src="https://storage.googleapis.com/a1aa/image/0c60456b-4238-4834-0f98-8bb5e18b5340.jpg"
+                width="600"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5 text-warning">
+                  Buy 2 Get 1 Free Coffee Blends
+                </h3>
+                <p class="card-text flex-grow-1">
+                  Mix and match any three coffee blends and pay only for two.
+                  Perfect to explore new flavours.
+                </p>
+                <button
+                  aria-label="Claim Coffee Blend Discount Offer"
+                  class="btn btn-warning text-white mt-auto"
+                  type="button"
+                >
+                  Claim Offer
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-4">
+            <div class="card offer-card h-100 shadow-sm">
+              <img
+                alt="Group of people enjoying a coffee brewing workshop with a barista demonstrating pour-over technique"
+                class="card-img-top"
+                height="400"
+                loading="lazy"
+                src="https://storage.googleapis.com/a1aa/image/123e3a98-c0b3-4efa-ab35-cb2aa48f564d.jpg"
+                width="600"
+              />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5 text-warning">
+                  Free Workshop with Subscription
+                </h3>
+                <p class="card-text flex-grow-1">
+                  Subscribe to any monthly coffee plan and get a free ticket to
+                  our next brewing workshop.
+                </p>
+                <button
+                  aria-label="Claim Free Workshop Offer"
+                  class="btn btn-warning text-white mt-auto"
+                  type="button"
+                >
+                  Claim Offer
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- Subscription Plans Section -->
+      <section aria-labelledby="subscription-plans-title" class="mb-5">
+        <h2
+          class="text-center fw-bold mb-4 text-warning"
+          id="subscription-plans-title"
+        >
+          Subscription Plans
+        </h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div
+              class="card subscription-card h-100 shadow-sm p-4 d-flex flex-column align-items-center text-center"
+            >
+              <img
+                alt="Icon representing the Basic coffee subscription plan with a simple coffee cup illustration"
+                class="mb-3"
+                height="150"
+                loading="lazy"
+                src="https://storage.googleapis.com/a1aa/image/8f55bbc4-c622-45de-7b3e-d19d94654ae4.jpg"
+                width="150"
+              />
+              <h3 class="h4 fw-semibold text-warning mb-3">Basic Plan</h3>
+              <p class="text-secondary mb-3">
+                Receive 250g of our signature coffee blend every month. Perfect
+                for casual coffee drinkers.
+              </p>
+              <ul class="list-unstyled text-secondary mb-4">
+                <li>• 250g freshly roasted coffee</li>
+                <li>• Free shipping</li>
+                <li>• Cancel anytime</li>
+              </ul>
+              <button
+                aria-label="Subscribe to Basic Plan"
+                class="btn btn-warning text-white"
+                type="button"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card subscription-card h-100 shadow-sm p-4 d-flex flex-column align-items-center text-center border-warning border-3"
+            >
+              <img
+                alt="Icon representing the Standard coffee subscription plan with a coffee bean and cup illustration"
+                class="mb-3"
+                height="150"
+                loading="lazy"
+                src="https://storage.googleapis.com/a1aa/image/8a2f26c5-13fa-4b19-aa9b-9eef16b6bcf5.jpg"
+                width="150"
+              />
+              <h3 class="h4 fw-semibold text-warning mb-3">Standard Plan</h3>
+              <p class="text-secondary mb-3">
+                Receive 500g of assorted coffee blends every month. Ideal for
+                enthusiasts who love variety.
+              </p>
+              <ul class="list-unstyled text-secondary mb-4">
+                <li>• 500g assorted blends</li>
+                <li>• Free shipping &amp; priority support</li>
+                <li>• Exclusive monthly offers</li>
+              </ul>
+              <button
+                aria-label="Subscribe to Standard Plan"
+                class="btn btn-warning text-white"
+                type="button"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card subscription-card h-100 shadow-sm p-4 d-flex flex-column align-items-center text-center"
+            >
+              <img
+                alt="Icon representing the Premium coffee subscription plan with a gold coffee cup and beans illustration"
+                class="mb-3"
+                height="150"
+                loading="lazy"
+                src="https://storage.googleapis.com/a1aa/image/6090a1e3-6b2e-4c92-69ae-d4e0222f3ae1.jpg"
+                width="150"
+              />
+              <h3 class="h4 fw-semibold text-warning mb-3">Premium Plan</h3>
+              <p class="text-secondary mb-3">
+                Receive 1kg of premium single-origin coffees every month plus
+                exclusive access to events.
+              </p>
+              <ul class="list-unstyled text-secondary mb-4">
+                <li>• 1kg premium single-origin</li>
+                <li>• Free shipping &amp; VIP support</li>
+                <li>• Invitations to exclusive events</li>
+              </ul>
+              <button
+                aria-label="Subscribe to Premium Plan"
+                class="btn btn-warning text-white"
+                type="button"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter Signup Section -->
+      <section
+        aria-labelledby="newsletter-title"
+        class="bg-warning bg-opacity-25 rounded-3 p-4 mx-auto"
+        style="max-width: 600px"
+      >
+        <h2 class="text-center fw-bold mb-4 text-warning" id="newsletter-title">
+          Stay Updated &amp; Get Exclusive Discounts
+        </h2>
+        <form
+          action="mailto:subscribe@beanboutique.com"
+          aria-label="Newsletter subscription form"
+          class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
+          enctype="text/plain"
+          method="POST"
+        >
+          <label class="visually-hidden" for="email"> Email address </label>
+          <input
+            aria-required="true"
+            class="form-control"
+            id="email"
+            name="Email"
+            placeholder="Enter your email address"
+            required=""
+            type="email"
+          />
+          <button
+            aria-label="Subscribe to newsletter"
+            class="btn btn-warning text-white"
+            type="submit"
+          >
+            Subscribe
+          </button>
+        </form>
+      </section>
+    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/script.js"></script>
+  </body>
 </html>

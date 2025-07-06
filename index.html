@@ -3,42 +3,154 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bean Boutique - Home</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   </head>
 
   <body>
-    <header>
-      <nav class="navbar">
-        <ul class="nav-left">
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
-          <li class="nav-item"><a href="equipment.html">Equipment</a></li>
-        </ul>
-        <img src="images/logo.png" alt="" class="logo" />
-        <ul class="nav-right">
-          <li class="nav-item"><a href="cart.html">Cart</a></li>
-          <li class="nav-item"><a href="events.html">Events</a></li>
-          <li class="nav-item">
-            <a href="subscriptions.html">Subscriptions</a>
-          </li>
-        </ul>
-      </nav>
+    <!-- Popup  -->
+    <div class="popup" id="discountPopup">
+      <div class="popup-content" role="document">
+        <button aria-label="Close modal" class="popup-close" id="modalCloseBtn">
+          <i id="closeIcon" class="fas fa-times fa-lg"> </i>
+        </button>
+        <h2 class="popup-title">Welcome to Bean Boutique!</h2>
+        <p class="popup-description">
+          Sign up with your email and get a 15% discount on your first purchase.
+        </p>
+        <form class="popup-form">
+          <label for="email">Email address</label>
+          <input
+            class="popup-input"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+            type="email"
+          />
+          <span class="popup-error" id="emailHelp"
+            >Please enter a valid email.</span
+          >
+          <button class="popup-btn button" type="submit">Get Discount</button>
+        </form>
+      </div>
+    </div>
+    <!-- Header -->
+    <div id="header"></div>
 
-      <button class="button">buttn</button>
-    </header>
+    <!-- Sections -->
+    <div class="container page-container">
+      <section>
+        <h1 class="heading" data-aos="fade-up">
+          BREWING WARM MEMORIES IN EVERY RICH,<br />
+          FLAVORFUL CUP <span>🍪</span>
+        </h1>
+        <p class="subtext" data-aos="fade-up">
+          Lorem ipsum dolor sit amet consectetur. Massa aenean tellus nullam
+          ullamcorper id amet viverra. Cras a pharetra aenean ultricies.
+        </p>
+        <div class="gallery">
+          <img
+            class="gallery-item opacity"
+            src="https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/10/coffee_its_benefits_898_1_.jpg"
+            alt="Coffee cup with beans and book"
+            data-aos="zoom-in-up"
+          />
+          <img
+            class="gallery-item"
+            src="https://corkframes.com/cdn/shop/articles/Corkframes_Coffee_Guide_520x500_422ebe38-4cfa-42b5-a266-b9bfecabaf30.jpg?v=1734598727"
+            alt="Latte and chocolate cake"
+            data-aos="zoom-in-down"
+          />
+          <img
+            class="gallery-item"
+            src="https://www.kbvresearch.com/images/blog/coffee-machine.jpg"
+            alt="Latte in tall glass and dessert"
+            data-aos="zoom-in-up"
+          />
+          <img
+            class="gallery-item"
+            src="https://frostingandfettuccine.com/wp-content/uploads/2022/12/Instant-Iced-Coffee-5-1.jpg"
+            alt="Espresso machine pouring coffee"
+            data-aos="zoom-in-down"
+          />
+          <img
+            class="gallery-item opacity"
+            src="https://m.media-amazon.com/images/I/717fbQ5DThL.jpg"
+            alt="Portafilter with coffee grounds"
+            data-aos="zoom-in-up"
+          />
+        </div>
+      </section>
+      <section id="map" class="section">
+        <h2>Find Us</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0128846928026!2d96.13451451469877!3d16.871311788377975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb43fbfd9fb3%3A0x784c55f317b39a79!2sBean%20Boutique%20Coffee%20Shop!5e0!3m2!1sen!2smm!4v1623456789012"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
 
+      <section class="coffee-section section">
+        <div class="left">
+          <h2 class="coffee-heading">
+            SIP INTO HAPPINESS WITH EVERY <br />
+            WARM, COMFORTING BREW <span>☕️</span>
+          </h2>
+          <img
+            src="https://storage.googleapis.com/a1aa/image/48e1387d-e7e0-43fa-33e3-532d08881f80.jpg"
+            alt="Interior of a coffee shop with bar stools, hanging lights, tables and chairs, and large windows"
+            class="coffee-image"
+            width="600"
+            height="400"
+            data-aos="fade-up-right"
+          />
+        </div>
+        <div class="right">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/9c74ffae-8cd0-486b-18ab-58247f0ec36b.jpg"
+            alt="Close-up of an espresso machine with a cup of coffee placed on the drip tray"
+            class="coffee-image bottom"
+            width="600"
+            height="400"
+            data-aos="fade-up-left"
+          />
+          <p class="coffee-text">
+            Lorem ipsum dolor sit amet consectetur. Leo condimentum ultrices
+            ornare blandit facilisis neque fringilla. Vehicula massa aenean
+            ipsum ut adipiscing adipiscing facilisis risus urna. Sit facilisis.
+          </p>
+          <button class="coffee-button button" aria-label="View our gallery">
+            View our gallery
+            <i class="fas fa-arrow-up-right-from-square"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/script.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

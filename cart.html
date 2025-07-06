@@ -1,32 +1,263 @@
-<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Bean Boutique - Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-<body>
-    <header>
-        <h1>Shopping Cart</h1>
-        <!-- Nav bar -->
-    </header>
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <section>
-        <h2>Your Items</h2>
-        <ul>
-            <li>Colombian Blend - 250g <button>Remove</button></li>
-            <li>French Press <button>Remove</button></li>
-        </ul>
-        <p><strong>Total:</strong> £24.99</p>
-        <button>Checkout (Coming Soon)</button>
-    </section>
+    <!-- Shopping Cart Content -->
+    <div class="container page-container">
+      <div class="flex flex-col md:flex-row md:space-x-12">
+        <!-- Cart Items -->
+        <section class="flex-grow bg-white rounded-lg shadow p-6 mb-10 md:mb-0">
+          <h2 class="text-2xl font-semibold text-yellow-800 mb-6">
+            Items in Your Cart
+          </h2>
+          <ul class="divide-y divide-gray-200" id="cart-items">
+            <!-- Cart Item 1 -->
+            <li class="py-6 flex flex-col sm:flex-row sm:items-center">
+              <img
+                alt="Bag of Ethiopian single-origin coffee beans with rich dark roasted color and natural coffee bean texture"
+                class="w-28 h-28 rounded-lg object-cover flex-shrink-0"
+                height="120"
+                src="https://storage.googleapis.com/a1aa/image/839699ad-744d-4bd6-b115-344afae6bd03.jpg"
+                width="120"
+              />
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex-grow">
+                <h3 class="text-lg font-semibold text-yellow-900">
+                  Ethiopian Single-Origin Coffee Beans
+                </h3>
+                <p class="text-gray-600 mt-1">
+                  Floral and citrus tasting notes, medium roast. Recommended
+                  brewing: pour-over, Aeropress.
+                </p>
+                <p class="text-yellow-700 font-semibold mt-2">$18.00</p>
+              </div>
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex items-center space-x-4">
+                <label class="sr-only" for="qty-1"> Quantity </label>
+                <input
+                  aria-label="Quantity for Ethiopian Single-Origin Coffee Beans"
+                  class="w-16 border border-gray-300 rounded-md text-center focus:ring-yellow-500 focus:border-yellow-500"
+                  id="qty-1"
+                  min="1"
+                  type="number"
+                  value="1"
+                />
+                <button
+                  aria-label="Remove Ethiopian Single-Origin Coffee Beans from cart"
+                  class="text-red-600 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-600 rounded"
+                >
+                  <i class="fas fa-trash-alt fa-lg"> </i>
+                </button>
+              </div>
+            </li>
+            <!-- Cart Item 2 -->
+            <li class="py-6 flex flex-col sm:flex-row sm:items-center">
+              <img
+                alt="Stainless steel French press coffee maker with glass carafe and black handle on white background"
+                class="w-28 h-28 rounded-lg object-cover flex-shrink-0"
+                height="120"
+                src="https://storage.googleapis.com/a1aa/image/02a02937-b925-4267-fd33-ee6744434a2f.jpg"
+                width="120"
+              />
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex-grow">
+                <h3 class="text-lg font-semibold text-yellow-900">
+                  Classic Stainless Steel French Press
+                </h3>
+                <p class="text-gray-600 mt-1">
+                  Durable and easy to use. Perfect for rich, full-bodied coffee.
+                  Usage tip: Use coarse ground coffee for best results.
+                </p>
+                <p class="text-yellow-700 font-semibold mt-2">$45.00</p>
+              </div>
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex items-center space-x-4">
+                <label class="sr-only" for="qty-2"> Quantity </label>
+                <input
+                  aria-label="Quantity for Classic Stainless Steel French Press"
+                  class="w-16 border border-gray-300 rounded-md text-center focus:ring-yellow-500 focus:border-yellow-500"
+                  id="qty-2"
+                  min="1"
+                  type="number"
+                  value="1"
+                />
+                <button
+                  aria-label="Remove Classic Stainless Steel French Press from cart"
+                  class="text-red-600 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-600 rounded"
+                >
+                  <i class="fas fa-trash-alt fa-lg"> </i>
+                </button>
+              </div>
+            </li>
+            <!-- Cart Item 3 -->
+            <li class="py-6 flex flex-col sm:flex-row sm:items-center">
+              <img
+                alt="Bag of Colombian single-origin coffee beans with medium roast and glossy packaging"
+                class="w-28 h-28 rounded-lg object-cover flex-shrink-0"
+                height="120"
+                src="https://storage.googleapis.com/a1aa/image/3c9c060c-1686-4200-2c23-773df37d84a5.jpg"
+                width="120"
+              />
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex-grow">
+                <h3 class="text-lg font-semibold text-yellow-900">
+                  Colombian Single-Origin Coffee Beans
+                </h3>
+                <p class="text-gray-600 mt-1">
+                  Nutty and chocolate tasting notes, medium-dark roast.
+                  Recommended brewing: espresso, drip coffee maker.
+                </p>
+                <p class="text-yellow-700 font-semibold mt-2">$20.00</p>
+              </div>
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex items-center space-x-4">
+                <label class="sr-only" for="qty-3"> Quantity </label>
+                <input
+                  aria-label="Quantity for Colombian Single-Origin Coffee Beans"
+                  class="w-16 border border-gray-300 rounded-md text-center focus:ring-yellow-500 focus:border-yellow-500"
+                  id="qty-3"
+                  min="1"
+                  type="number"
+                  value="2"
+                />
+                <button
+                  aria-label="Remove Colombian Single-Origin Coffee Beans from cart"
+                  class="text-red-600 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-600 rounded"
+                >
+                  <i class="fas fa-trash-alt fa-lg"> </i>
+                </button>
+              </div>
+            </li>
+            <!-- Cart Item 4 -->
+            <li class="py-6 flex flex-col sm:flex-row sm:items-center">
+              <img
+                alt="Compact black espresso machine with silver accents and steam wand on kitchen counter"
+                class="w-28 h-28 rounded-lg object-cover flex-shrink-0"
+                height="120"
+                src="https://storage.googleapis.com/a1aa/image/ee07ed6e-4e17-468a-1448-d8e2a3525cc2.jpg"
+                width="120"
+              />
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex-grow">
+                <h3 class="text-lg font-semibold text-yellow-900">
+                  Compact Espresso Machine
+                </h3>
+                <p class="text-gray-600 mt-1">
+                  Perfect for home baristas. Features adjustable pressure and
+                  steam wand. Usage tip: Use freshly ground coffee for best
+                  crema.
+                </p>
+                <p class="text-yellow-700 font-semibold mt-2">$250.00</p>
+              </div>
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex items-center space-x-4">
+                <label class="sr-only" for="qty-4"> Quantity </label>
+                <input
+                  aria-label="Quantity for Compact Espresso Machine"
+                  class="w-16 border border-gray-300 rounded-md text-center focus:ring-yellow-500 focus:border-yellow-500"
+                  id="qty-4"
+                  min="1"
+                  type="number"
+                  value="1"
+                />
+                <button
+                  aria-label="Remove Compact Espresso Machine from cart"
+                  class="text-red-600 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-600 rounded"
+                >
+                  <i class="fas fa-trash-alt fa-lg"> </i>
+                </button>
+              </div>
+            </li>
+            <!-- Cart Item 5 -->
+            <li class="py-6 flex flex-col sm:flex-row sm:items-center">
+              <img
+                alt="Glass pour over coffee maker with wooden collar and matching glass carafe on wooden table"
+                class="w-28 h-28 rounded-lg object-cover flex-shrink-0"
+                height="120"
+                src="https://storage.googleapis.com/a1aa/image/1d151194-d4eb-4243-c978-9e2d6ddd2cdb.jpg"
+                width="120"
+              />
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex-grow">
+                <h3 class="text-lg font-semibold text-yellow-900">
+                  Glass Pour Over Coffee Set
+                </h3>
+                <p class="text-gray-600 mt-1">
+                  Includes dripper, carafe, and wooden collar. Usage tip: Use
+                  medium-fine grind and pour in slow circular motions.
+                </p>
+                <p class="text-yellow-700 font-semibold mt-2">$35.00</p>
+              </div>
+              <div class="mt-4 sm:mt-0 sm:ml-6 flex items-center space-x-4">
+                <label class="sr-only" for="qty-5"> Quantity </label>
+                <input
+                  aria-label="Quantity for Glass Pour Over Coffee Set"
+                  class="w-16 border border-gray-300 rounded-md text-center focus:ring-yellow-500 focus:border-yellow-500"
+                  id="qty-5"
+                  min="1"
+                  type="number"
+                  value="1"
+                />
+                <button
+                  aria-label="Remove Glass Pour Over Coffee Set from cart"
+                  class="text-red-600 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-red-600 rounded"
+                >
+                  <i class="fas fa-trash-alt fa-lg"> </i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- Cart Summary -->
+        <aside
+          class="w-full md:w-80 bg-white rounded-lg shadow p-6 flex flex-col justify-between"
+        >
+          <div>
+            <h2 class="text-2xl font-semibold text-yellow-800 mb-6">
+              Order Summary
+            </h2>
+            <div class="flex justify-between text-gray-700 mb-3">
+              <span> Subtotal </span>
+              <span class="font-semibold" id="subtotal-price"> $388.00 </span>
+            </div>
+            <div class="flex justify-between text-gray-700 mb-3">
+              <span> Estimated Tax (8%) </span>
+              <span class="font-semibold" id="tax-price"> $31.04 </span>
+            </div>
+            <div
+              class="flex justify-between text-yellow-900 font-bold text-xl border-t border-yellow-300 pt-3 mb-6"
+            >
+              <span> Total </span>
+              <span id="total-price"> $419.04 </span>
+            </div>
+          </div>
+          <button
+            class="w-full bg-yellow-700 hover:bg-yellow-800 text-white font-bold py-3 rounded-md shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-yellow-600"
+            id="checkout-button"
+          >
+            Proceed to Checkout
+          </button>
+        </aside>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Bean Boutique</p>
-    </footer>
-</body>
-
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
