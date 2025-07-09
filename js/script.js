@@ -154,3 +154,54 @@ updatePrices();
 document.getElementById("checkout-button").addEventListener("click", () => {
   alert("Checkout functionality coming soon!");
 });
+
+const coffeeItems = [
+  {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYEHq9CPM7UC75pp2OdN_PzYKtBGbEvrUeYA&s",
+    title: "Morning Bliss",
+    price: "$6.00 USD",
+    desc: "A smooth medium roast with notes of caramel and hazelnut. Perfect to start your day.",
+    recommend: "Pour-over, Espresso",
+    notes: "Caramel, Nutty",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=400&q=80",
+    title: "Ethiopian Floral",
+    price: "$7.80 USD",
+    desc: "Floral aroma and citrus brightness. Great with pour-over or Chemex.",
+    recommend: "Pour-over, Chemex",
+    notes: "Floral, Citrus",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=400&q=80",
+    title: "House Blend",
+    price: "$6.00 USD",
+    desc: "Balanced flavor with caramel and nutty notes. Ideal for drip or cold brew.",
+    recommend: "Drip, Cold Brew",
+    notes: "Caramel, Nutty",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&q=80",
+    title: "Kenyan Citrus",
+    price: "$7.50 USD",
+    desc: "Bright citrusy acidity, vibrant body.",
+    recommend: "Chemex, V60",
+    notes: "Citrus, Bright",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80",
+    title: "Colombian Classic",
+    price: "$6.50 USD",
+    desc: "Classic Colombian blend with chocolate and nut undertones.",
+    recommend: "Drip, French Press",
+    notes: "Chocolate, Nutty",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80",
+    title: "Sumatra Dark",
+    price: "$7.90 USD",
+    desc: "Dark roast with bold body and earthy flavors.",
+    recommend: "Espresso, French Press",
+    notes: "Earthy, Bold",
+  },
+];

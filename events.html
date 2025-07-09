@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Events and Workshops</title>
     <link rel="stylesheet" href="css/styles.css" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -20,12 +22,18 @@
 
     <!-- AOS (Animate on Scroll) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- JustValidate Plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/just-validate@latest/dist/just-validate.production.min.js"></script>
   </head>
+
   <body>
     <!-- Header -->
     <div id="header"></div>
+
     <div class="container page-container">
       <h1 class="heading" data-aos="fade-up">Events and Workshops</h1>
+
       <div class="row g-4">
         <!-- Event 1 -->
         <div class="col-12 col-md-6 col-lg-4">
@@ -224,6 +232,7 @@
         </div>
       </div>
 
+      <!-- Registration Form Section -->
       <section class="mt-5 mx-auto" style="max-width: 400px">
         <h2
           class="text-center mb-4 fs-4 fw-bold text-uppercase"
@@ -231,7 +240,9 @@
         >
           Register for an Event
         </h2>
+
         <form
+          id="event-registration"
           action="mailto:your-email@example.com"
           method="POST"
           enctype="text/plain"
@@ -252,6 +263,7 @@
             />
             <div class="invalid-feedback">Please enter your first name.</div>
           </div>
+
           <div class="mb-3">
             <label for="lastName" class="form-label fw-semibold"
               >Last Name</label
@@ -266,6 +278,7 @@
             />
             <div class="invalid-feedback">Please enter your last name.</div>
           </div>
+
           <div class="mb-4">
             <label for="email" class="form-label fw-semibold"
               >Email Address</label
@@ -282,13 +295,35 @@
               Please enter a valid email address.
             </div>
           </div>
+
           <button type="submit" class="button btn-yellow w-100">Submit</button>
         </form>
       </section>
     </div>
+
     <!-- Footer -->
     <div id="footer"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <!-- JustValidate Configuration -->
+    <script>
+      const validation = new JustValidate("#event-registration");
+
+      validation
+        .addField("#firstName", [
+          { rule: "required", errorMessage: "First name is required" },
+          { rule: "minLength", value: 2 },
+        ])
+        .addField("#lastName", [
+          { rule: "required", errorMessage: "Last name is required" },
+          { rule: "minLength", value: 2 },
+        ])
+        .addField("#email", [
+          { rule: "required", errorMessage: "Email is required" },
+          { rule: "email", errorMessage: "Enter a valid email address" },
+        ]);
+    </script>
   </body>
 </html>
