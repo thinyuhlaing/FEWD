@@ -69,13 +69,7 @@ const headerHTML = `
 
 const footerHtml = `
         <footer class="footer" id="footer-template">
-      <img
-        src="https://storage.googleapis.com/a1aa/image/2ff448db-fee5-4b77-93dc-fb27f8465922.jpg"
-        alt="Close-up image of coffee beans in a cup, dark brown tones"
-        class="footer-bg"
-        width="1920"
-        height="400"
-      />
+
       <div class="footer-container">
         <div class="footer-left">
                <img

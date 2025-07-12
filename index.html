@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Selection Page</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css" />
@@ -107,39 +111,45 @@
       </section>
 
       <!-- Coffee Section -->
-      <section class="coffee-section section">
-        <div class="left">
-          <h2 class="coffee-heading">
-            SIP INTO HAPPINESS WITH EVERY <br />
-            WARM, COMFORTING BREW <span aria-hidden="true">☕</span>
-          </h2>
-          <img
-            src="https://storage.googleapis.com/a1aa/image/48e1387d-e7e0-43fa-33e3-532d08881f80.jpg"
-            alt="Interior of a coffee shop"
-            class="coffee-image"
-            width="600"
-            height="400"
-            data-aos="fade-up-right"
-          />
-        </div>
-        <div class="right">
-          <img
-            src="https://storage.googleapis.com/a1aa/image/9c74ffae-8cd0-486b-18ab-58247f0ec36b.jpg"
-            alt="Espresso machine with cup"
-            class="coffee-image bottom"
-            width="600"
-            height="400"
-            data-aos="fade-up-left"
-          />
-          <p class="coffee-text">
-            Lorem ipsum dolor sit amet consectetur. Leo condimentum ultrices
-            ornare blandit facilisis neque fringilla. Vehicula massa aenean
-            ipsum ut adipiscing adipiscing facilisis risus urna. Sit facilisis.
-          </p>
-          <button class="coffee-button button" aria-label="View our gallery">
-            View our gallery
-            <i class="fas fa-arrow-up-right-from-square"></i>
-          </button>
+      <section class="coffee-section section container py-5">
+        <div class="row align-items-center g-5">
+          <!-- Left Column -->
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <h2 class="coffee-heading mb-4">
+              SIP INTO HAPPINESS WITH EVERY <br />
+              WARM, COMFORTING BREW <span aria-hidden="true">☕</span>
+            </h2>
+            <img
+              src="https://storage.googleapis.com/a1aa/image/48e1387d-e7e0-43fa-33e3-532d08881f80.jpg"
+              alt="Interior of a coffee shop"
+              class="img-fluid rounded"
+              width="600"
+              height="400"
+              data-aos="fade-up-right"
+            />
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-12 col-lg-6 text-center text-lg-start">
+            <img
+              src="https://storage.googleapis.com/a1aa/image/9c74ffae-8cd0-486b-18ab-58247f0ec36b.jpg"
+              alt="Espresso machine with cup"
+              class="img-fluid rounded mb-3"
+              width="600"
+              height="400"
+              data-aos="fade-up-left"
+            />
+            <p class="coffee-text mb-4 px-2 px-lg-0">
+              Lorem ipsum dolor sit amet consectetur. Leo condimentum ultrices
+              ornare blandit facilisis neque fringilla. Vehicula massa aenean
+              ipsum ut adipiscing adipiscing facilisis risus urna. Sit
+              facilisis.
+            </p>
+            <button class="coffee-button button" aria-label="View our gallery">
+              View our gallery
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
         </div>
       </section>
 
