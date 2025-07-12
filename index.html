@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <title>Coffee Selection Page</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
@@ -24,13 +27,15 @@
   </head>
 
   <body>
-    <!-- Popup  -->
+    <!-- Popup -->
     <div class="popup" id="discountPopup">
       <div class="popup-content" role="document">
         <button aria-label="Close modal" class="popup-close" id="modalCloseBtn">
-          <i id="closeIcon" class="fas fa-times fa-lg"> </i>
+          <i id="closeIcon" class="fas fa-times fa-lg"></i>
         </button>
-        <h2 class="popup-title">Welcome to Bean Boutique!</h2>
+        <h2 class="popup-title">
+          Welcome to Bean Boutique! <span aria-hidden="true">🏠</span>
+        </h2>
         <p class="popup-description">
           Sign up with your email and get a 15% discount on your first purchase.
         </p>
@@ -51,15 +56,17 @@
         </form>
       </div>
     </div>
+
     <!-- Header -->
     <div id="header"></div>
 
     <!-- Sections -->
     <div class="container page-container">
+      <!-- Banner -->
       <section>
         <h1 class="heading" data-aos="fade-up">
           BREWING WARM MEMORIES IN EVERY RICH,<br />
-          FLAVORFUL CUP <span>🍪</span>
+          FLAVORFUL CUP <span aria-hidden="true">☕</span>
         </h1>
         <p class="subtext" data-aos="fade-up">
           Lorem ipsum dolor sit amet consectetur. Massa aenean tellus nullam
@@ -98,28 +105,17 @@
           />
         </div>
       </section>
-      <section id="map" class="section">
-        <h2>Find Us</h2>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0128846928026!2d96.13451451469877!3d16.871311788377975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb43fbfd9fb3%3A0x784c55f317b39a79!2sBean%20Boutique%20Coffee%20Shop!5e0!3m2!1sen!2smm!4v1623456789012"
-          width="100%"
-          height="300"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
 
+      <!-- Coffee Section -->
       <section class="coffee-section section">
         <div class="left">
           <h2 class="coffee-heading">
             SIP INTO HAPPINESS WITH EVERY <br />
-            WARM, COMFORTING BREW <span>☕️</span>
+            WARM, COMFORTING BREW <span aria-hidden="true">☕</span>
           </h2>
           <img
             src="https://storage.googleapis.com/a1aa/image/48e1387d-e7e0-43fa-33e3-532d08881f80.jpg"
-            alt="Interior of a coffee shop with bar stools, hanging lights, tables and chairs, and large windows"
+            alt="Interior of a coffee shop"
             class="coffee-image"
             width="600"
             height="400"
@@ -129,7 +125,7 @@
         <div class="right">
           <img
             src="https://storage.googleapis.com/a1aa/image/9c74ffae-8cd0-486b-18ab-58247f0ec36b.jpg"
-            alt="Close-up of an espresso machine with a cup of coffee placed on the drip tray"
+            alt="Espresso machine with cup"
             class="coffee-image bottom"
             width="600"
             height="400"
@@ -147,240 +143,116 @@
         </div>
       </section>
 
-      <!-- Image Slider: Bootstrap Carousel -->
+      <!-- Product Slider -->
       <div
-        id="coffeeCardSlider"
-        class="carousel slide my-5"
+        id="productSlider"
+        class="carousel slide section"
         data-bs-ride="carousel"
       >
-        <div class="carousel-inner">
-          <!-- Slide 1: Card 1, 2, 3 -->
-          <div class="carousel-item active">
-            <div class="row">
-              <!-- Card 1 -->
-              <div
-                class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
-                data-aos="fade-up"
-                data-name="Morning Bliss caramel nutty"
-              >
-                <div class="card h-100">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYEHq9CPM7UC75pp2OdN_PzYKtBGbEvrUeYA&s"
-                    alt="Morning Bliss"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Morning Bliss</h5>
-                      <span class="card-price">$6.00 USD</span>
-                    </div>
-                    <div class="card-description">
-                      <p>
-                        A smooth medium roast with notes of caramel and
-                        hazelnut.
-                      </p>
-                      <p class="mb-0">
-                        <strong>Recommended Brewing:</strong> Pour-over, French
-                        Press
-                      </p>
-                      <p class="mb-0">
-                        <strong>Tasting Notes:</strong> Espresso, French Press
-                      </p>
-                      <div class="button add-to-card-btn">
-                        Add To Cart <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 2 -->
-              <div
-                class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
-                data-aos="fade-up"
-              >
-                <div class="card h-100">
-                  <img
-                    src="https://source.unsplash.com/300x200/?coffee-beans"
-                    alt="Card 2"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Bold Beans</h5>
-                      <span class="card-price">$7.00 USD</span>
-                    </div>
-                    <div class="card-description">
-                      <p>Bold, earthy blend with deep roasted notes.</p>
-                      <p class="mb-0"><strong>Recommended:</strong> Moka Pot</p>
-                      <p class="mb-0">
-                        <strong>Tasting Notes:</strong> Bold, Earthy
-                      </p>
-                      <div class="button add-to-card-btn">
-                        Add To Cart <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 3 -->
-              <div
-                class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
-                data-aos="fade-up"
-              >
-                <div class="card h-100">
-                  <img
-                    src="https://source.unsplash.com/300x200/?coffee-cup"
-                    alt="Card 3"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Vanilla Delight</h5>
-                      <span class="card-price">$5.50 USD</span>
-                    </div>
-                    <div class="card-description">
-                      <p>Light vanilla essence with a smooth finish.</p>
-                      <p class="mb-0">
-                        <strong>Recommended:</strong> French Press
-                      </p>
-                      <p class="mb-0">
-                        <strong>Tasting Notes:</strong> Vanilla, Smooth
-                      </p>
-                      <div class="button add-to-card-btn">
-                        Add To Cart <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2: Card 4, 5, 6 -->
-          <div class="carousel-item">
-            <div class="row">
-              <!-- Card 4 -->
-              <div
-                class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
-                data-aos="fade-up"
-              >
-                <div class="card h-100">
-                  <img
-                    src="https://source.unsplash.com/300x200/?coffee-shop"
-                    alt="Card 4"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Espresso Edge</h5>
-                      <span class="card-price">$6.50 USD</span>
-                    </div>
-                    <div class="card-description">
-                      <p>Rich espresso blend for intense flavor lovers.</p>
-                      <p class="mb-0">
-                        <strong>Recommended:</strong> Espresso Machine
-                      </p>
-                      <p class="mb-0">
-                        <strong>Tasting Notes:</strong> Rich, Dark Chocolate
-                      </p>
-                      <div class="button add-to-card-btn">
-                        Add To Cart <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 5 -->
-              <div
-                class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
-                data-aos="fade-up"
-              >
-                <div class="card h-100">
-                  <img
-                    src="https://source.unsplash.com/300x200/?coffee-breakfast"
-                    alt="Card 5"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Hazelnut Hug</h5>
-                      <span class="card-price">$6.25 USD</span>
-                    </div>
-                    <div class="card-description">
-                      <p>Creamy hazelnut flavor in a balanced roast.</p>
-                      <p class="mb-0">
-                        <strong>Recommended:</strong> Drip, French Press
-                      </p>
-                      <p class="mb-0">
-                        <strong>Tasting Notes:</strong> Nutty, Creamy
-                      </p>
-                      <div class="button add-to-card-btn">
-                        Add To Cart <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 6 -->
-              <div
-                class="col-sm-6 col-lg-4 mb-4 card-wrapper mix"
-                data-aos="fade-up"
-              >
-                <div class="card h-100">
-                  <img
-                    src="https://source.unsplash.com/300x200/?iced-coffee"
-                    alt="Card 6"
-                  />
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <h5 class="card-title">Iced Bliss</h5>
-                      <span class="card-price">$5.75 USD</span>
-                    </div>
-                    <div class="card-description">
-                      <p>Chilled coffee perfect for sunny days.</p>
-                      <p class="mb-0">
-                        <strong>Recommended:</strong> Cold Brew
-                      </p>
-                      <p class="mb-0">
-                        <strong>Tasting Notes:</strong> Refreshing, Smooth
-                      </p>
-                      <div class="button add-to-card-btn">
-                        Add To Cart <i class="fas fa-arrow-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Carousel Controls -->
+        <h1 class="heading-2" data-aos="fade-up">
+          Coffee Selection <span aria-hidden="true">☕</span>
+        </h1>
+        <div class="carousel-inner" id="productCarouselInner"></div>
         <button
-          class="carousel-control-prev"
+          class="custom-control-prev"
           type="button"
-          data-bs-target="#coffeeCardSlider"
+          data-bs-target="#productSlider"
           data-bs-slide="prev"
+          aria-label="Previous"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <i class="fa-solid fa-chevron-left fa-2x icon" aria-hidden="true"></i>
           <span class="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          class="custom-control-next"
           type="button"
-          data-bs-target="#coffeeCardSlider"
+          data-bs-target="#productSlider"
           data-bs-slide="next"
+          aria-label="Next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <i
+            class="fa-solid fa-chevron-right fa-2x icon"
+            aria-hidden="true"
+          ></i>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
+      <!-- Event & Workshops Slider -->
+      <div
+        id="eventSlider"
+        class="carousel slide section"
+        data-bs-ride="carousel"
+      >
+        <h1 class="heading-2" data-aos="fade-up">
+          Events & Workshops <span aria-hidden="true">🗓️</span>
+        </h1>
+        <div class="carousel-inner" id="eventCarouselInner"></div>
+        <button
+          class="custom-control-prev"
+          type="button"
+          data-bs-target="#eventSlider"
+          data-bs-slide="prev"
+          aria-label="Previous"
+        >
+          <i class="fa-solid fa-chevron-left fa-2x icon" aria-hidden="true"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="custom-control-next"
+          type="button"
+          data-bs-target="#eventSlider"
+          data-bs-slide="next"
+          aria-label="Next"
+        >
+          <i
+            class="fa-solid fa-chevron-right fa-2x icon"
+            aria-hidden="true"
+          ></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Google Map -->
+      <section id="map" class="section">
+        <h1 class="heading-2" data-aos="fade-up">
+          Location <span aria-hidden="true">📍</span>
+        </h1>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0128846928026!2d96.13451451469877!3d16.871311788377975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1eb43fbfd9fb3%3A0x784c55f317b39a79!2sBean%20Boutique%20Coffee%20Shop!5e0!3m2!1sen!2smm!4v1623456789012"
+          width="100%"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
     </div>
 
     <!-- Footer -->
     <div id="footer"></div>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Insert slides into product carousel
+      const productCarouselInner = document.getElementById(
+        "productCarouselInner"
+      );
+      productCarouselInner.innerHTML = renderCarouselSlides(
+        coffeeItems,
+        renderItemCard
+      );
+
+      // Insert slides into event carousel
+      const eventCarouselInner = document.getElementById("eventCarouselInner");
+      eventCarouselInner.innerHTML = renderCarouselSlides(
+        eventItems,
+        renderEventCard
+      );
+    </script>
   </body>
 </html>

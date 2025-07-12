@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Bean Boutique - Shopping Cart</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Shopping Cart Content -->
+    <div class="container page-container">
+      <div class="row gy-5 gx-0" style="justify-content: space-between">
+        <!-- Cart Items -->
+        <section class="col-12 col-lg-7 cart-section p-3">
+          <h2 class="cart-title">Items in Your Cart</h2>
+          <ul class="list-unstyled" id="cart-items">
+            <!-- Existing Cart Item -->
+            <li class="mb-4 row g-3 align-items-center">
+              <div class="col-12 col-sm-auto text-center">
+                <img
+                  src="https://storage.googleapis.com/a1aa/image/839699ad-744d-4bd6-b115-344afae6bd03.jpg"
+                  alt="Ethiopian coffee"
+                  class="rounded-img"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div class="col">
+                <h3 class="cart-item-title">
+                  Ethiopian Single-Origin Coffee Beans
+                </h3>
+                <p class="cart-item-desc">
+                  Floral and citrus tasting notes, medium roast.
+                </p>
+                <p class="cart-item-price">$18.00</p>
+              </div>
+              <div
+                class="col-12 col-sm-auto d-flex align-items-center gap-2 justify-content-start justify-content-sm-end"
+              >
+                <input type="number" min="1" value="1" class="cart-input" />
+                <button class="remove-btn">
+                  <i class="fas fa-trash-alt fa-lg"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- New Cart Item 1 -->
+            <li class="mb-4 row g-3 align-items-center">
+              <div class="col-12 col-sm-auto text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=120&q=80"
+                  alt="Colombian Coffee"
+                  class="rounded-img"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div class="col">
+                <h3 class="cart-item-title">Colombian Medium Roast Coffee</h3>
+                <p class="cart-item-desc">
+                  Balanced flavor with chocolate and nutty undertones.
+                </p>
+                <p class="cart-item-price">$15.50</p>
+              </div>
+              <div
+                class="col-12 col-sm-auto d-flex align-items-center gap-2 justify-content-start justify-content-sm-end"
+              >
+                <input type="number" min="1" value="1" class="cart-input" />
+                <button class="remove-btn">
+                  <i class="fas fa-trash-alt fa-lg"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- New Cart Item 2 -->
+            <li class="mb-4 row g-3 align-items-center">
+              <div class="col-12 col-sm-auto text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1563201514-caa43e0bfb8f?auto=format&fit=crop&w=120&q=80"
+                  alt="French Press"
+                  class="rounded-img"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div class="col">
+                <h3 class="cart-item-title">Classic French Press</h3>
+                <p class="cart-item-desc">
+                  Stainless steel and glass, perfect for brewing rich coffee.
+                </p>
+                <p class="cart-item-price">$25.00</p>
+              </div>
+              <div
+                class="col-12 col-sm-auto d-flex align-items-center gap-2 justify-content-start justify-content-sm-end"
+              >
+                <input type="number" min="1" value="1" class="cart-input" />
+                <button class="remove-btn">
+                  <i class="fas fa-trash-alt fa-lg"></i>
+                </button>
+              </div>
+            </li>
+
+            <!-- New Cart Item 3 -->
+            <li class="mb-4 row g-3 align-items-center">
+              <div class="col-12 col-sm-auto text-center">
+                <img
+                  src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=120&q=80"
+                  alt="Vanilla Syrup"
+                  class="rounded-img"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div class="col">
+                <h3 class="cart-item-title">Vanilla Coffee Syrup</h3>
+                <p class="cart-item-desc">
+                  Adds sweet vanilla flavor, 250ml bottle.
+                </p>
+                <p class="cart-item-price">$8.75</p>
+              </div>
+              <div
+                class="col-12 col-sm-auto d-flex align-items-center gap-2 justify-content-start justify-content-sm-end"
+              >
+                <input type="number" min="1" value="1" class="cart-input" />
+                <button class="remove-btn">
+                  <i class="fas fa-trash-alt fa-lg"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Summary Section -->
+        <aside class="col-12 col-lg-4 summary-box p-3">
+          <h2 class="summary-title">Order Summary</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="subtotal-price">$388.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated Tax (8%)</span>
+            <span id="tax-price">$31.04</span>
+          </div>
+          <div class="summary-total d-flex justify-content-between">
+            <span>Total</span>
+            <span id="total-price">$419.04</span>
+          </div>
+          <button class="checkout-btn w-100" id="checkout-button">
+            Proceed to Checkout
+          </button>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
