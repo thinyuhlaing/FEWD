@@ -31,7 +31,7 @@ const headerHTML = `
 
               <!-- Cart + Signup moved inside collapse for mobile -->
               <div class="mobile-only d-lg-none flex-column align-items-center">
-                <a href="shopping-cart" class="position-relative text-decoration-none" style="color: #0b1d17">
+                <a href="shopping-cart.html" class="position-relative text-decoration-none" style="color: #0b1d17">
                   <i class="fas fa-shopping-cart" style="font-size: 20px"></i>
                   <span class="count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
                 </a>
@@ -42,7 +42,7 @@ const headerHTML = `
 
           <!-- Right side actions (desktop only) -->
           <div class="d-none d-lg-flex align-items-center ms-auto gap-3">
-            <a href="shopping-cart" class="position-relative text-decoration-none" style="color: #0b1d17">
+            <a href="shopping-cart.html" class="position-relative text-decoration-none" style="color: #0b1d17">
               <i class="fas fa-shopping-cart" style="font-size: 20px"></i>
               <span class="count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
             </a>
