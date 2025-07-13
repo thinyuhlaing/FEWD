@@ -33,7 +33,7 @@ const headerHTML = `
               <div class="mobile-only d-lg-none flex-column align-items-center">
                 <a href="shopping-cart.html" class="position-relative text-decoration-none" style="color: #0b1d17">
                   <i class="fas fa-shopping-cart" style="font-size: 20px"></i>
-                  <span class="count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
+                  <span class="count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">4</span>
                 </a>
                 <button class="signup-btn button">Sign Up <i class="fas fa-arrow-right"></i></button>
               </div>
@@ -44,7 +44,7 @@ const headerHTML = `
           <div class="d-none d-lg-flex align-items-center ms-auto gap-3">
             <a href="shopping-cart.html" class="position-relative text-decoration-none" style="color: #0b1d17">
               <i class="fas fa-shopping-cart" style="font-size: 20px"></i>
-              <span class="count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
+              <span class="count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">4</span>
             </a>
             <div style="width: 1px; height: 24px; background: #0b1d17"></div>
             <button class="signup-btn button">Sign Up <i class="fas fa-arrow-right"></i></button>
@@ -129,7 +129,7 @@ const coffeeItems = [
     type: "coffee",
     img: "images/coffee_images/ethiopian_yirgacheffe.jpg",
     title: "Ethiopian Yirgacheffe",
-    price: "$7.50 USD",
+    price: "$7.50",
     desc: "Bright and floral single-origin coffee with notes of citrus, jasmine, and berries.",
     recommend: "Pour-over, French Press, Espresso",
     notes: "Citrus, jasmine, berry",
@@ -138,7 +138,7 @@ const coffeeItems = [
     type: "coffee",
     img: "images/coffee_images/colombian_supremo.jpg",
     title: "Colombian Supremo",
-    price: "$6.80 USD",
+    price: "$6.80",
     desc: "Full-bodied and smooth coffee with rich caramel sweetness and nutty undertones.",
     recommend: "Drip Brew, French Press",
     notes: "Caramel, chocolate, nutty",
@@ -147,7 +147,7 @@ const coffeeItems = [
     type: "coffee",
     img: "images/coffee_images/sumatra_mandheling.jpg",
     title: "Sumatra Mandheling",
-    price: "$8.00 USD",
+    price: "$8.00",
     desc: "Deep, earthy, and bold with herbal complexity and low acidity.",
     recommend: "Espresso, Cold Brew",
     notes: "Earthy, spicy, herbal",
@@ -156,7 +156,7 @@ const coffeeItems = [
     type: "coffee",
     img: "images/coffee_images/tanzanian_peaberry.jpg",
     title: "Tanzanian Peaberry Blackcurrant",
-    price: "$7.90 USD",
+    price: "$7.90",
     desc: "Vibrant and juicy with blackcurrant and citrus notes, offering a wine-like finish.",
     recommend: "Pour-over, Chemex",
     notes: "Blackcurrant, citrus, winey",
@@ -165,7 +165,7 @@ const coffeeItems = [
     type: "coffee",
     img: "images/coffee_images/guatemala_antigua.jpg",
     title: "Guatemala Antigua",
-    price: "$7.20 USD",
+    price: "$7.20",
     desc: "Balanced coffee with chocolate and warm spice notes, finished with light smokiness.",
     recommend: "French Press, Espresso",
     notes: "Chocolate, spice, smoky",
@@ -174,7 +174,7 @@ const coffeeItems = [
     type: "coffee",
     img: "images/coffee_images/french_roast_blend.jpg",
     title: "Dark French Roast",
-    price: "$6.50 USD",
+    price: "$6.50",
     desc: "Bold and smoky dark roast with a chocolatey base and hints of toasted nuts.",
     recommend: "Drip Brew, Espresso",
     notes: "Smoky, dark chocolate, nutty",

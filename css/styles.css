@@ -599,7 +599,7 @@ nav {
 
 /* ---------------------------------------------- */
 
-/* Coffee selection */
+/* Coffee selection & Brewing Equipemnt Page */
 
 .card {
   border: none;
@@ -691,9 +691,8 @@ nav {
 
 /* ---------------------------------------------- */
 
-/* Cart Page */
+/* Shopping Cart Page */
 
-/* Cart Section */
 .cart-section {
   background-color: var(--background-color);
   border-radius: 0.75rem;
